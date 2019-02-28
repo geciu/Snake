@@ -46,7 +46,18 @@ public class Panel extends JPanel implements Runnable{
         }
         ticks++;
         if(ticks > 250000) {
-            if
+            if(right) xCoor++;
+            if(left) xCoor--;
+            if(up) yCoor--;
+            if(down) yCoor++;
+
+            ticks = 0;
+            body = new Body(xCoor, yCoor, 10);
+            snake.add(body);
+
+            if (snake.size() > size){
+                snake.remove(0);
+            }
         }
     }
 

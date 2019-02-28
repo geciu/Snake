@@ -22,13 +22,13 @@ public class Body {
     public int getxCoor(){
         return xCoor;
     }
-    public int setxCoor(){
+    public void setxCoor(int xCoor){
         this.xCoor = xCoor;
     }
     public int getyCoor(){
         return yCoor;
     }
-    public int setyCoor(){
+    public void setyCoor(int yCoor){
        this.yCoor = yCoor;
     }
 }
