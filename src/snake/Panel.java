@@ -107,39 +107,11 @@ public class Panel extends JPanel implements Runnable, KeyListener {
             }
         }
 //koniec gry bo kolizja z granica // border collision
-       /* if(xCoor < 0) { xCoor = 79;}
-        else if (xCoor > 79) { xCoor = 0;}
-        else if (yCoor < 0) { yCoor = 79;}
-        else if (yCoor > 79) { yCoor = 0;}
+        if(xCoor < 0 || xCoor > 79 || yCoor < 0 || yCoor > 79) {
             System.out.println("Game Over!");
-            stop(); */
-        //body collision
-        for (int i = 0; i < snake.size(); i++) {
-            if (xCoor > 79) {
-                xCoor = 0;
-
-            }
-        }
-
-        for (int i = 0; i < snake.size(); i++) {
-            if (xCoor < 0) {
-                xCoor = 79;
-
-            }
-        }
-
-        for (int i = 0; i < snake.size(); i++) {
-            if (yCoor > 79) {
-                yCoor = 0;
-
-            }
-        }
-
-        for (int i = 0; i < snake.size(); i++) {
-            if (yCoor < 0) {
-                yCoor = 79;
-
-            }
+            if (points > 0) System.out.println("Congratulations! Score: " + points + " points");
+            else System.out.println("Better next time :( " + "Score: " + + points + " points. Good Luck!");
+            stop();
         }
     }
 
